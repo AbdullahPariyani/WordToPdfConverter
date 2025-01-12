@@ -1,5 +1,4 @@
-﻿
-
+﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
@@ -15,23 +14,25 @@ namespace DocxToPdfConverter
         static void Main(string[] args)
         {
             // Paths to the input and output files
-            string docxFilePath = "reports/input_ar.docx";  // Adjust the path accordingly
-            string copiedDocxFilePath = "output/input_copy.docx"; // New copy for modifications
-            string pdfFilePath = "output/output.pdf";   // Adjust the path accordingly
+            string docxFilePath = "input_ar.docx";  // Adjust the path accordingly
+            string copiedDocxFilePath = "input_copy.docx"; // New copy for modifications
+            string pdfFilePath = "output.pdf";   // Adjust the path accordingly
 
             // Dictionary of placeholders and their replacements
             var replacements = new Dictionary<string, string>
             {
-                { "{{nameA}}", "عبدالله محمد الياس بارياني" },
-                { "{{nameE}}", "ABDULLAH MOHAMMAD ILIYAS PARIYANI" },
+                { "{{invoiceNameE}}", "ABDULLAH MOHAMMAD ILIYAS PARIYANI" },
+                { "{{invoiceNameA}}", "عبدالله محمد الياس بارياني" },
                 { "{{invoiceNumber}}", "2024/DNU65-700/5766" },
                 { "{{invoiceDate}}", "13-05-2024 00:00:00" },
                 { "{{policyNumber}}", "330519770" },
                 { "{{amount}}", "2488.55" },
-                { "{{amountAdmin}}", "30" },
+                { "{{amountAdmin}}", "500" },
                 { "{{amountTotal}}", "2896.33" },
                 { "{{periodFrom}}", "14/05/2024" },
-                { "{{periodTo}}", "13/05/2025" }
+                { "{{periodTo}}", "13/05/2025" },
+                { "{{abdullah}}", "13/05/2025" },
+                {"{{image}}",""}
             };
 
             try
@@ -67,25 +68,45 @@ namespace DocxToPdfConverter
             // Open the DOCX file
             using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(docxFilePath, true))
             {
-                // Get the body of the document
+                // Step 1: Replace text in the main document body
                 var body = wordDoc.MainDocumentPart.Document.Body;
+                ReplaceTextInElement(body, replacements);
 
-                // Iterate through all text elements in the document
-                foreach (var text in body.Descendants<Text>())
+                // Step 2: Replace text in headers
+                foreach (var headerPart in wordDoc.MainDocumentPart.HeaderParts)
                 {
-                    // Check each placeholder in the dictionary
-                    foreach (var replacement in replacements)
-                    {
-                        if (text.Text.Contains(replacement.Key))
-                        {
-                            // Replace the placeholder with the corresponding value
-                            text.Text = text.Text.Replace(replacement.Key, replacement.Value);
-                        }
-                    }
+                    ReplaceTextInElement(headerPart.Header, replacements);
+                }
+
+                // Step 3: Replace text in footers
+                foreach (var footerPart in wordDoc.MainDocumentPart.FooterParts)
+                {
+                    ReplaceTextInElement(footerPart.Footer, replacements);
                 }
 
                 // Save the changes
                 wordDoc.MainDocumentPart.Document.Save();
+            }
+        }
+
+        // Helper method to replace text in a given OpenXml element
+        static void ReplaceTextInElement(OpenXmlElement element, Dictionary<string, string> replacements)
+        {
+            var allTextElements = element.Descendants<Text>();
+
+            // Debug: Check the contents before processing
+            foreach (var text in allTextElements)
+            {
+                Console.WriteLine($"Original text: {text.Text}");  // Debug log
+
+                foreach (var replacement in replacements)
+                {
+                    if (text.Text.Contains(replacement.Key))
+                    {
+                        // Replace the placeholder with the corresponding value
+                        text.Text = text.Text.Replace(replacement.Key, replacement.Value);
+                    }
+                }
             }
         }
 
