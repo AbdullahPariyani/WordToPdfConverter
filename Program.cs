@@ -24,7 +24,7 @@ namespace DocxToPdfConverter
             {
                 { "{{name}}", "Saju Kabir" },
                 { "{{date}}", DateTime.Now.ToString("dd-MM-yyyy") },
-                { "{{companyName}}", "Malath Insurance" },
+                { "{{companyName}}", "Digimate Insurance" },
                 { "{{amount}}", "12345" },
                 // Add more placeholders as needed
             };
