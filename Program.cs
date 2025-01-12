@@ -22,11 +22,16 @@ namespace DocxToPdfConverter
             // Dictionary of placeholders and their replacements
             var replacements = new Dictionary<string, string>
             {
-                { "{{name}}", "Saju Kabir" },
-                { "{{date}}", DateTime.Now.ToString("dd-MM-yyyy") },
-                { "{{companyName}}", "Digimate Insurance" },
-                { "{{amount}}", "12345" },
-                // Add more placeholders as needed
+                { "{{nameA}}", "عبدالله محمد الياس بارياني" },
+                { "{{nameE}}", "ABDULLAH MOHAMMAD ILIYAS PARIYANI" },
+                { "{{invoiceNumber}}", "2024/DNU65-700/5766" },
+                { "{{invoiceDate}}", "13-05-2024 00:00:00" },
+                { "{{policyNumber}}", "330519770" },
+                { "{{amount}}", "2488.55" },
+                { "{{amountAdmin}}", "30" },
+                { "{{amountTotal}}", "2896.33" },
+                { "{{periodFrom}}", "14/05/2024" },
+                { "{{periodTo}}", "13/05/2025" }
             };
 
             try
