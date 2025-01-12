@@ -33,7 +33,6 @@ D:\Abdullah\MyFirstApp\bin\Debug\net8.0\MyFirstApp.pdb
 D:\Abdullah\MyFirstApp\bin\Debug\net8.0\Aspose.Words.dll
 D:\Abdullah\MyFirstApp\bin\Debug\net8.0\Autofac.dll
 D:\Abdullah\MyFirstApp\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
-D:\Abdullah\MyFirstApp\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
 D:\Abdullah\MyFirstApp\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\Abdullah\MyFirstApp\bin\Debug\net8.0\SkiaSharp.dll
 D:\Abdullah\MyFirstApp\bin\Debug\net8.0\System.IO.Packaging.dll
