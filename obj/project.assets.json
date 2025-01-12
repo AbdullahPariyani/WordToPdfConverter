@@ -845,24 +845,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\a.pariyani\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AB\\learning\\.net\\WordToPdfConverter\\MyFirstApp.csproj",
+      "projectUniqueName": "D:\\Abdullah\\MyFirstApp\\MyFirstApp.csproj",
       "projectName": "MyFirstApp",
-      "projectPath": "D:\\AB\\learning\\.net\\WordToPdfConverter\\MyFirstApp.csproj",
-      "packagesPath": "C:\\Users\\a.pariyani\\.nuget\\packages\\",
-      "outputPath": "D:\\AB\\learning\\.net\\WordToPdfConverter\\obj\\",
+      "projectPath": "D:\\Abdullah\\MyFirstApp\\MyFirstApp.csproj",
+      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+      "outputPath": "D:\\Abdullah\\MyFirstApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\a.pariyani\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

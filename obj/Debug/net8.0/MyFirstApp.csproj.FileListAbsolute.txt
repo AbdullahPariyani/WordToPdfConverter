@@ -80,3 +80,4 @@ D:\AB\learning\.net\WordToPdfConverter\obj\Debug\net8.0\refint\MyFirstApp.dll
 D:\AB\learning\.net\WordToPdfConverter\obj\Debug\net8.0\MyFirstApp.pdb
 D:\AB\learning\.net\WordToPdfConverter\obj\Debug\net8.0\MyFirstApp.genruntimeconfig.cache
 D:\AB\learning\.net\WordToPdfConverter\obj\Debug\net8.0\ref\MyFirstApp.dll
+D:\Abdullah\MyFirstApp\obj\Debug\net8.0\MyFirstApp.sourcelink.json

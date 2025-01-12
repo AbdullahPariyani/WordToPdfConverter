@@ -15,16 +15,16 @@ namespace DocxToPdfConverter
         static void Main(string[] args)
         {
             // Paths to the input and output files
-            string docxFilePath = "reports/input.docx";  // Adjust the path accordingly
+            string docxFilePath = "reports/input_ar.docx";  // Adjust the path accordingly
             string copiedDocxFilePath = "output/input_copy.docx"; // New copy for modifications
             string pdfFilePath = "output/output.pdf";   // Adjust the path accordingly
 
             // Dictionary of placeholders and their replacements
             var replacements = new Dictionary<string, string>
             {
-                { "{{name}}", "Saju Kabir" },
+                { "{{name}}", "Abdullah Pariyani" },
                 { "{{date}}", DateTime.Now.ToString("dd-MM-yyyy") },
-                { "{{companyName}}", "Digimate Insurance" },
+                { "{{companyName}}", "Malath Insurance" },
                 { "{{amount}}", "12345" },
                 // Add more placeholders as needed
             };
