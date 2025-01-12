@@ -15,9 +15,9 @@ namespace DocxToPdfConverter
         static void Main(string[] args)
         {
             // Paths to the input and output files
-            string docxFilePath = "input.docx";  // Adjust the path accordingly
-            string copiedDocxFilePath = "input_copy.docx"; // New copy for modifications
-            string pdfFilePath = "output.pdf";   // Adjust the path accordingly
+            string docxFilePath = "reports/input.docx";  // Adjust the path accordingly
+            string copiedDocxFilePath = "output/input_copy.docx"; // New copy for modifications
+            string pdfFilePath = "output/output.pdf";   // Adjust the path accordingly
 
             // Dictionary of placeholders and their replacements
             var replacements = new Dictionary<string, string>

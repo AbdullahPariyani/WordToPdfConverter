@@ -1,0 +1,8 @@
+{
+    "name": "word-to-pdf-converter",
+    "version": "0.0.1",
+    "author": "Abdullah Pariyani",
+    "scripts": {
+        "dotnet": "dotnet run"
+    }
+}
